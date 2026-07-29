@@ -1,0 +1,74 @@
+{
+  "entities": {
+    "users": {
+      "title": "users",
+      "description": "User profiles and account data",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "role": { "type": "string", "enum": ["user", "admin"] },
+        "phone": { "type": "string" },
+        "age": { "type": "number" },
+        "emergencyContact": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["uid", "name", "email", "role"]
+    },
+    "services": {
+      "title": "services",
+      "description": "Senior wellness programs and mobility care services",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "duration": { "type": "number" },
+        "price": { "type": "number" },
+        "category": { "type": "string" },
+        "active": { "type": "boolean" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["title", "description", "duration", "price", "category", "active"]
+    },
+    "slots": {
+      "title": "slots",
+      "description": "Rolling 3-day appointment time slots",
+      "type": "object",
+      "properties": {
+        "serviceId": { "type": "string" },
+        "serviceTitle": { "type": "string" },
+        "date": { "type": "string" },
+        "startTime": { "type": "string" },
+        "endTime": { "type": "string" },
+        "capacity": { "type": "number" },
+        "bookedSeats": { "type": "number" },
+        "availableSeats": { "type": "number" }
+      },
+      "required": ["serviceId", "date", "startTime", "endTime", "capacity", "bookedSeats", "availableSeats"]
+    },
+    "bookings": {
+      "title": "bookings",
+      "description": "User appointment reservations",
+      "type": "object",
+      "properties": {
+        "bookingId": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "serviceId": { "type": "string" },
+        "serviceTitle": { "type": "string" },
+        "slotId": { "type": "string" },
+        "date": { "type": "string" },
+        "startTime": { "type": "string" },
+        "endTime": { "type": "string" },
+        "price": { "type": "number" },
+        "paymentType": { "type": "string" },
+        "paymentStatus": { "type": "string" },
+        "bookingStatus": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["bookingId", "userId", "serviceId", "slotId", "date", "price", "bookingStatus"]
+    }
+  }
+}

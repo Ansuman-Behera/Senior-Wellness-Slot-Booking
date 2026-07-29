@@ -1,0 +1,6 @@
+{
+  "name": "KineticAge - Senior Wellness & Slot Booking",
+  "description": "Full-stack senior wellness and mobility service booking platform with user & admin dashboards, slot management, ACID transactional booking, and payment processing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
